@@ -1,6 +1,6 @@
 # Hyprland theme 
 
-'''
+'''bash
 cd .config/hypr/src
 '''
 '''
