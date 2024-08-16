@@ -3,6 +3,6 @@ background_opacity 0.9
 
 
 # BEGIN_KITTY_THEME
-# Base2Tone Field Dark
+# Base2Tone Drawbridge Dark
 include current-theme.conf
 # END_KITTY_THEME

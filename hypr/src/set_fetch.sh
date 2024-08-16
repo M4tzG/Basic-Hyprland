@@ -1,7 +1,29 @@
+
+set_fetch() {
+
+    LOGO_DIR="$HOME/.config/hypr/themes/$THEME/logo"
+
+    # Escolhe um wallpaper aleatório
+    LOGO=$(find "$LOGO_DIR" -type f | shuf -n 1)
+
+    # Obtém a extensão do arquivo
+    EXTENSION="${LOGO##*.}"
+
+    # Define o tipo com base na extensão
+    if [ "$EXTENSION" = "txt" ]; then
+        LOGO_TYPE="file"
+    elif [ "$EXTENSION" = "png" ]; then
+        LOGO_TYPE="kitty-direct"
+    else
+        LOGO_TYPE="kitty-direct"  # Ou qualquer outro tipo padrão
+    fi
+
+    # Cria o arquivo de configuração
+    cat >"$HOME/.config/fastfetch/config.jsonc" <<EOF
 {
     "logo": {
-        "type": "kitty-direct",
-        "source": "/home/matheus/.config/hypr/themes/arch/logo/pngwing.com(2)(1).png",
+        "type": "$LOGO_TYPE",
+        "source": "${LOGO}",
 
         "padding": {
             "top": 2,
@@ -120,3 +142,5 @@
     ]
 }
 
+EOF
+}
