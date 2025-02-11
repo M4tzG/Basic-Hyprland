@@ -4,6 +4,7 @@
 
 #define LINE_TO_EDIT 13
 #define MAX_LINE_LENGTH 1024
+#define PATH_MAX 4096
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -12,9 +13,17 @@ int main(int argc, char *argv[]) {
     }
 
     const char *input = argv[1];
-    const char *filename = "../hyprland.conf";
+    
+    char filename[PATH_MAX];
+    char theme_file[PATH_MAX];
+
+    /* Construct path string to get to this user's home dir */
+    snprintf(filename, PATH_MAX, "%s/.config/hypr/hyprland.conf", getenv("HOME"));
+
+    /* Construct path string to get to this user's home dir */
+    snprintf(theme_file, PATH_MAX, "%s/.config/hypr/.theme", getenv("HOME"));
+
     const char *tempfile = "arquivo_temp.conf";
-    const char *theme_file = "../.theme";
     
     FILE *file = fopen(filename, "r");
     FILE *temp = fopen(tempfile, "w");

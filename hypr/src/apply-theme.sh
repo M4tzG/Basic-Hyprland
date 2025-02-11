@@ -8,8 +8,8 @@ source "$HOME"/.config/hypr/src/set_fetch.sh
 # =========================================================================== #
 
 set_term_config
-set_wallpaper
 set_fetch
+set_wallpaper
 
 clear 
 fastfetch

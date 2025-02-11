@@ -1,0 +1,28 @@
+========================================== TODO ==========================================
+- Verificar se o tema existe:
+    Antes de aplicar o tema, verifique se o diretório correspondente ao tema existe. 
+- Mostrar uma mensagem de confirmação ao aplicar um tema:
+    Exiba uma mensagem para confirmar que o tema foi aplicado com sucesso ou 
+    notifique o usuário em caso de falha.
+- Adicionar uma opção de pré-visualização de tema:
+    Crie uma função que permita ao usuário pré-visualizar um tema antes de aplicá-lo,
+    por exemplo, mostrando uma captura de tela do tema ou uma descrição.
+- Log de ações:
+    Adicione um sistema de log que registre quando temas são listados ou aplicados,
+    para ajudar no diagnóstico de problemas.
+- Verificar permissões:
+    Antes de tentar aplicar o tema, verifique se o usuário tem permissões suficientes 
+    para executar o script de mudança de tema e para acessar o diretório de temas.
+- Backup do tema atual:
+    Antes de aplicar um novo tema, faça um backup do tema atual para que o usuário possa 
+    restaurá-lo facilmente se desejar.
+- Validação do nome do tema:
+    Adicione uma validação mais robusta ao nome do tema, verificando se ele contém 
+    caracteres inválidos ou se o nome está vazio.
+- Compatibilidade com outros comandos:
+    Adicione novos comandos ou opções, como "remove" para excluir um tema ou "export" 
+    para salvar o tema em um formato específico.
+- Modo interativo:
+    Ofereça um modo interativo onde o usuário pode navegar entre os temas disponíveis e 
+    escolher um para aplicar, sem precisar passar comandos via linha de comando.
+==========================================================================================

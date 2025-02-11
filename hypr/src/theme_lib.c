@@ -4,6 +4,7 @@
 #include <dirent.h>
 #include <sys/types.h>
 
+
 #define PATH_MAX 4096
 
 void list_themes(char *filepath) {
@@ -30,11 +31,11 @@ void list_themes(char *filepath) {
 
 void apply_theme(const char *theme_name) {
 
-    printf("Aplicando o tema: %s\n", theme_name);
+    // printf("Aplicando o tema: %s\n", theme_name);
     
     // Usar system() para executar o script de aplicação
     char change_theme[256];
-    snprintf(change_theme, sizeof(change_theme), "%s/.config/hypr/src/change-theme %s",getenv("HOME"), theme_name);
+    snprintf(change_theme, sizeof(change_theme), "change-theme %s", theme_name);
     system(change_theme);
 
     char apply_theme[256];
