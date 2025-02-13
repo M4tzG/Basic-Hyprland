@@ -3,6 +3,7 @@
 sub_folder () {
     local origin=$1
     local dest=$2
+    
 
     if [ -d "$origin" ]; then
         if [ -d "$dest" ]; then
@@ -36,6 +37,10 @@ origin_dir=".config"
 
 dest_dir="$HOME/.config"
 #dest_dir="testando"
+
+if [ ! -d "$dest_dir" ]; then
+    mkdir -p "$dest_dir"
+fi
 
 backup_dir="config_backup"
 
